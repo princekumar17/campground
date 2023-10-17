@@ -17,4 +17,8 @@ router.route('/login')
 
 router.get('/logout', users.logout); 
 
+router.get('/',(req,res)=>{
+    res.send({'success':'success'})
+})
+
 module.exports = router;
