@@ -16,9 +16,4 @@ router.route('/login')
     .post( storeReturnTo ,passport.authenticate('local',{ failureFlash: true, failureRedirect:'/login'}),users.login)
 
 router.get('/logout', users.logout); 
-
-router.get('/',(req,res)=>{
-    res.send({'success':'success'})
-})
-
 module.exports = router;
